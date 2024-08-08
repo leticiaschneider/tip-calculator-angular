@@ -1,5 +1,5 @@
 {
-  "name": "tip-calculatore",
+  "name": "tip-calculator",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:tip-calculatore": "node dist/tip-calculatore/server/server.mjs"
+    "serve:ssr:tip-calculator": "node dist/tip-calculator/server/server.mjs"
   },
   "private": true,
   "dependencies": {
