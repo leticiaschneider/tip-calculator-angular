@@ -1,6 +1,26 @@
 <div class="container">
     <div class="right-box">
+        <form>
+            <div class="label-row">
+                <label for="bill">Bill</label>
+                <input type="number" id="bill" name="bill" min="0" max="1000000" />
+            </div>
 
+            <div>
+                <label for="bill">Select Tip %</label>
+                <button type="button">5%</button>
+                <button type="button">10%</button>
+                <button type="button">15%</button>
+                <button type="button">25%</button>
+                <button type="button">50%</button>
+                <button type="button">Custom</button>
+            </div>
+
+            <div class="label-row">
+                <label for="people">Number of People</label>
+                <input type="number" id="people" name="people" min="0" max="1000000" />
+            </div>
+        </form>
     </div>
     <div class="left-box">
         Tip Amount / Person
