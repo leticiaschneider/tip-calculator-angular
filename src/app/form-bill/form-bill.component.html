@@ -1,22 +1,25 @@
 <div class="container">
     <div class="right-box">
         <form>
-            <div class="label-row">
-                <label for="bill">Bill</label>
-                <input type="number" id="bill" name="bill" min="0" max="1000000" />
+            <div class="form-group">
+                <label for="currency-field">Bill</label>
+                <input type="text" name="currency-field" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="$1,000,000.00">
+                <!-- <input type="number" id="bill" name="bill" min="0" max="1000000" /> -->
             </div>
 
-            <div>
+            <div class="form-group">
                 <label for="bill">Select Tip %</label>
-                <button type="button">5%</button>
-                <button type="button">10%</button>
-                <button type="button">15%</button>
-                <button type="button">25%</button>
-                <button type="button">50%</button>
-                <button type="button">Custom</button>
+                <div class="row">
+                    <button class="btn-tip" type="button">5%</button>
+                    <button class="btn-tip" type="button">10%</button>
+                    <button class="btn-tip" type="button">15%</button>
+                    <button class="btn-tip" type="button">25%</button>
+                    <button class="btn-tip" type="button">50%</button>
+                    <button class="btn-tip" type="button">Custom</button>
+                </div>
             </div>
 
-            <div class="label-row">
+            <div class="form-group">
                 <label for="people">Number of People</label>
                 <input type="number" id="people" name="people" min="0" max="1000000" />
             </div>

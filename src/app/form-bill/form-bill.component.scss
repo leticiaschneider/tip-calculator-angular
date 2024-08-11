@@ -1,15 +1,47 @@
 .container {
     border-radius: 20px;
     background-color: white;
-    max-width: 400px;
-    padding: 50px;
+    max-width: 500px;
+    padding: 25px;
+    font-size: 20px;
 
     display: flex;
 
     .right-box {
-        .label-row {
+        .form-group {
             display: flex;
             flex-direction: column;
+            padding: 20px;
+            width: -webkit-fill-available;
+
+            label {
+                margin-bottom: 5px;
+            }
+
+            .row { 
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 10px;
+                row-gap: 10px;
+
+                .btn-tip { 
+                    background-color: #ef9c36;
+                    padding: 10px 20px;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                }
+            }
+        }
+
+
+        input { 
+            font-size: 18px;
+            padding: 5px;
+            color: #ef9c36;
+            background-color: rgb(250, 235, 210);
+            border: none;
+            outline: none;
         }
     }
 
