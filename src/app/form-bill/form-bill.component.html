@@ -3,37 +3,36 @@
         <form>
             <div class="form-group">
                 <label for="currency-field">Bill</label>
-                <input type="text" name="currency-field" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="$1,000,000.00">
-                <!-- <input type="number" id="bill" name="bill" min="0" max="1000000" /> -->
+                <input type="number" [(ngModel)]="billObj.billValue" name="currency-field" id="currency-field" min="0" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" placeholder="$1,000,000.00">
             </div>
 
             <div class="form-group">
                 <label for="bill">Select Tip %</label>
                 <div class="row">
-                    <button class="btn-tip" type="button">5%</button>
-                    <button class="btn-tip" type="button">10%</button>
-                    <button class="btn-tip" type="button">15%</button>
-                    <button class="btn-tip" type="button">25%</button>
-                    <button class="btn-tip" type="button">50%</button>
+                    <button class="btn-tip" (click)="billObj.tipPercentage = 5" type="button">5%</button>
+                    <button class="btn-tip" (click)="billObj.tipPercentage = 10" type="button">10%</button>
+                    <button class="btn-tip" (click)="billObj.tipPercentage = 15" type="button">15%</button>
+                    <button class="btn-tip" (click)="billObj.tipPercentage = 20" type="button">25%</button>
+                    <button class="btn-tip" (click)="billObj.tipPercentage = 50" type="button">50%</button>
                     <button class="btn-tip" type="button">Custom</button>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="people">Number of People</label>
-                <input type="number" id="people" name="people" min="0" max="1000000" />
+                <input type="number" id="people" name="people" [(ngModel)]="billObj.numberOfPeople" min="1" max="1000000" />
             </div>
         </form>
     </div>
     <div class="left-box">
         <div class="row">
             <label>Tip Amount <br> <span> / Person</span> </label>
-            <span class="total">$ 0</span>
+            <span class="total">$ {{ billObj.tipAmountPerPerson }}</span>
         </div>
 
         <div class="row">
             <label>Total <br> <span> / Person</span> </label>
-            <span class="total">$ 0</span>
+            <span class="total">$ {{ billObj.totalPerPerson }}</span>
         </div>
 
         <button class="btn-reset" type="button">Reset</button>
