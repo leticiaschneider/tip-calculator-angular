@@ -17,4 +17,11 @@ export class FormBillComponent {
     tipAmountPerPerson: 0,
     totalPerPerson: 0
   }
+
+  calculeValues() {
+    this.billObj.tipAmountPerPerson = (this.billObj.billValue * this.billObj.tipPercentage / 100) / this.billObj.numberOfPeople;
+    this.billObj.totalPerPerson = (this.billObj.billValue / this.billObj.numberOfPeople) + this.billObj.tipAmountPerPerson;
+  }
 }
+
+
