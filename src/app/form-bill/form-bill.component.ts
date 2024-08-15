@@ -19,8 +19,8 @@ export class FormBillComponent {
   }
 
   calculeValues() {
-    this.billObj.tipAmountPerPerson = (this.billObj.billValue * this.billObj.tipPercentage / 100) / this.billObj.numberOfPeople;
-    this.billObj.totalPerPerson = (this.billObj.billValue / this.billObj.numberOfPeople) + this.billObj.tipAmountPerPerson;
+    this.billObj.tipAmountPerPerson = parseFloat(((this.billObj.billValue * this.billObj.tipPercentage / 100) / this.billObj.numberOfPeople).toFixed(2));
+    this.billObj.totalPerPerson = parseFloat(((this.billObj.billValue / this.billObj.numberOfPeople) + this.billObj.tipAmountPerPerson).toFixed(2));
   }
 }
 
