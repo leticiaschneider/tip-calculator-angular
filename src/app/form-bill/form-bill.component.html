@@ -14,7 +14,11 @@
                     <button class="btn-tip" (click)="billObj.tipPercentage = 15; calculeValues()" type="button">15%</button>
                     <button class="btn-tip" (click)="billObj.tipPercentage = 20; calculeValues()" type="button">25%</button>
                     <button class="btn-tip" (click)="billObj.tipPercentage = 50; calculeValues()" type="button">50%</button>
-                    <button class="btn-tip" type="button">Custom</button>
+                    <button class="btn-tip" type="button" (click)="showCustomTip = !showCustomTip">Custom</button>
+                </div>
+                <div class="row mt-30" *ngIf="showCustomTip">
+                    <label for="custom-tip">Custom Tip</label>
+                    <input type="number" [(ngModel)]="billObj.tipPercentage" name="custom-tip" id="custom-tip" min="0" (change)="calculeValues()">
                 </div>
             </div>
 

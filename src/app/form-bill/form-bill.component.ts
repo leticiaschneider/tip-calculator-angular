@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './form-bill.component.scss'
 })
 export class FormBillComponent {
+  showCustomTip: Boolean = false;
   billObj = {
     billValue: 0,
     tipPercentage: 0,
