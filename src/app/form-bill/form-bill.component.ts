@@ -23,6 +23,16 @@ export class FormBillComponent {
     this.billObj.tipAmountPerPerson = parseFloat(((this.billObj.billValue * this.billObj.tipPercentage / 100) / this.billObj.numberOfPeople).toFixed(2));
     this.billObj.totalPerPerson = parseFloat(((this.billObj.billValue / this.billObj.numberOfPeople) + this.billObj.tipAmountPerPerson).toFixed(2));
   }
+
+  resetValues() {
+    this.billObj = {
+      billValue: 0,
+      tipPercentage: 0,
+      numberOfPeople: 1,
+      tipAmountPerPerson: 0,
+      totalPerPerson: 0
+    }
+  }
 }
 
 

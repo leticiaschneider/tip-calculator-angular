@@ -48,27 +48,32 @@
     }
 
     .left-box {
+        display: flex;
+        flex-direction: column;
         border-radius: 20px;
         background-color: #ef9c36;
         width: 325px;
         padding: 21px;
 
-        .row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-
-            label {
-                font-size: 16px;
-                color: white;
-                span {
-                    font-size: 12px;
+        #values {
+            flex: 1;
+            .row {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+    
+                label {
+                    font-size: 16px;
+                    color: white;
+                    span {
+                        font-size: 12px;
+                    }
                 }
-            }
-
-            .total {
-                font-size: 40px;
-                color: rgb(250, 235, 210);
+    
+                .total {
+                    font-size: 40px;
+                    color: rgb(250, 235, 210);
+                }
             }
         }
 

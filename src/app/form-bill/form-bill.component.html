@@ -29,16 +29,19 @@
         </form>
     </div>
     <div class="left-box">
-        <div class="row">
-            <label>Tip Amount <br> <span> / Person</span> </label>
-            <span class="total">$ {{ billObj.tipAmountPerPerson }}</span>
+        <div id="values">
+            <div class="row">
+                <label>Tip Amount <br> <span> / Person</span> </label>
+                <span class="total">$ {{ billObj.tipAmountPerPerson }}</span>
+            </div>
+    
+            <div class="row">
+                <label>Total <br> <span> / Person</span> </label>
+                <span class="total">$ {{ billObj.totalPerPerson }}</span>
+            </div>
         </div>
-
-        <div class="row">
-            <label>Total <br> <span> / Person</span> </label>
-            <span class="total">$ {{ billObj.totalPerPerson }}</span>
+        <div>
+            <button class="btn-reset" type="button" (click)="resetValues()">Reset</button>
         </div>
-
-        <button class="btn-reset" type="button">Reset</button>
     </div>
 </div>
