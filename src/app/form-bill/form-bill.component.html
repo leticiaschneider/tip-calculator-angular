@@ -3,7 +3,8 @@
         <form>
             <div class="form-group">
                 <label for="currency-field">Bill</label>
-                <input type="number" [(ngModel)]="billObj.billValue" name="currency-field" id="currency-field" min="0" (change)="calculeValues()">
+                <input type="number" [(ngModel)]="billObj.billValue" pattern="\d*" name="currency-field" id="currency-field" min="0" (change)="calculeValues(); setValidation()">
+                <p class="error" *ngIf="error.billValueHasError"> {{ error.messageError }} </p>
             </div>
 
             <div class="form-group">
@@ -18,13 +19,15 @@
                 </div>
                 <div class="row mt-30" *ngIf="showCustomTip">
                     <label for="custom-tip">Custom Tip</label>
-                    <input type="number" [(ngModel)]="billObj.tipPercentage" name="custom-tip" id="custom-tip" min="0" (change)="calculeValues()">
+                    <input type="number" [(ngModel)]="billObj.tipPercentage" pattern="\d*" name="custom-tip" id="custom-tip" min="0" (change)="calculeValues(); setValidation()">
+                    <p class="error" *ngIf="error.tipPercentageHasError"> {{ error.messageError }} </p>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="people">Number of People</label>
-                <input type="number" id="people" name="people" [(ngModel)]="billObj.numberOfPeople" (change)="calculeValues()" min="1" max="1000000" />
+                <input type="number" id="people" name="people" pattern="\d*" [(ngModel)]="billObj.numberOfPeople" (change)="calculeValues(); setValidation()" min="1" max="1000000" />
+                <p class="error" *ngIf="error.numberOfPeopleHasError"> {{ error.messageError }} </p>
             </div>
         </form>
     </div>
