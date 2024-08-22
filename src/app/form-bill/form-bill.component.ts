@@ -63,6 +63,7 @@ export class FormBillComponent {
     }
 
     setTimeout(() => {
+      this.calculeValues();
       this.error.tipPercentageHasError = false;
       this.error.numberOfPeopleHasError = false;
       this.error.billValueHasError = false;
