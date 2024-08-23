@@ -1,6 +1,6 @@
 # 🧮 Tip Calculator Angular
 
-A web application built with Angular that allows users to calculate tips and split bills with ease. The layout and design inspiration for this project was taken from a challenge provided by Frontend Mentor.
+A web application built with Angular that allows users to calculate tips and split bills with ease. The layout and design inspiration for this project was taken from a challenge provided by [Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX).
 
 
 ## Demo
