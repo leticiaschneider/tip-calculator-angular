@@ -1,27 +1,24 @@
-# Tipcalculator
+# 🧮 Tip Calculator Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
+A web application built with Angular that allows users to calculate tips and split bills with ease. The layout and design inspiration for this project was taken from a challenge provided by Frontend Mentor.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Demo
 
-## Code scaffolding
+You can view a live demo of the app [here](https://leticiaschneider.github.io/tip-calculator-angular/).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone the repository: `git clone https://github.com/leticiaschneider/tip-calculator-angular`
+2. Navigate to the project folder: `cd tip-calculator-angular`
+3. Install dependencies: `npm install`
+4. Run the app: `ng serve`
 
-## Running unit tests
+Visit `http://localhost:4200/` in your browser to see the app in action.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## ✨ Contact
 
-## Running end-to-end tests
+Letícia Araújo Schneider - leticia.schneider@gmail.com
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Project Link: https://leticiaschneider.github.io/tip-calculator-angular/
